@@ -24,6 +24,10 @@ img {
   width: 300px;
 }
 
+.starter {
+  width: 700px;
+}
+
 ::selection {
   color: #fff;
   background: #bee4fd;
