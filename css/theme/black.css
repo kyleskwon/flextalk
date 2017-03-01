@@ -20,6 +20,10 @@ body {
   font-weight: normal;
   color: #fff; }
 
+img {
+  width: 300px;
+}
+
 ::selection {
   color: #fff;
   background: #bee4fd;

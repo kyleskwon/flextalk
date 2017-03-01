@@ -25,15 +25,24 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="#05a5d1" data-markdown>
-          <script type="text/template"># FlexTalk</script>
+          <script type="text/template">
+           # FlexTalk
+
+           ### Using Flexbox with React Native
+
+           -
+
+           #### By Kyle Kwon
+           ###### @SmartLogic
+          </script>
         </section>
 
 				<section data-background-color="#05a5d1">What is Flexbox?</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           A grid system of flexible boxes
+           Grid system of flexible boxes for
 
-           for responsive web and mobile layout
+           responsive web and mobile layout
 
            (inspired by Bootstrap)
           </script>
@@ -42,52 +51,101 @@
 				<section data-background-color="#05a5d1">Why should we utilize it?</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           It makes responsive design easier
+           Makes responsive design easier!
 
-           since React Native allows developers to
+           -
 
-           share code between iOS and Android apps
+           React Native shares code between
+
+           iOS and Android apps
           </script>
         </section>
 
-        <section data-background-color="#13a500">How to we use it in React Native?</section>
+        <section data-background-color="#13a500">How to use it with React Native?</section>
         <section data-background-color="#13a500">Beginner Tips</section>
 
-        <section data-background-color="#05a5d1">Establishing a parent container with Flex: 1</section>
-        <section data-background-color="#2D2D2D">The Flex property determines the proportion of a given space assigned to the child. To make things simpler, use fractions. </section>
+        <section data-background-color="#05a5d1">Establishing a parent element with Flex: 1</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-             (Fl)example:
+           The `Flex` property determines the given space for
 
-         A parent container has two children,
-                      each with Flex: 1
+           -
 
-         The child elements split the given amount of space
+           a parent element
 
+           or
 
-                           THINK: each has ½
+           the children within the parent
+
+           --
+
+           Think simple, think fractions!
           </script>
+        </section>
+        <section data-background-color="#2D2D2D" data-markdown>
+          <script type="text/template">
+             (Fl)example
+
+         A parent element has Flex: 1
+
+       As a result,
+
+         it takes up the entire space of the screen
+          </script>
+        </section>
+        <section>
+          <img data-src="./images/slide9.png">
         </section>
 
         <section data-background-color="#05a5d1">Visualizing proportions with borderWidth and borderColor</section>
-        <section data-background-color="#2D2D2D">The nature of React is to reuse components in different parts of the app. Sometimes, the flex proportions can be a guessing game. To save time, a simple method to visualize the proportions is to use borders for child elements with different colors</section>
+        <section data-background-color="#2D2D2D" data-markdown>
+          React embraces reusable components
+
+          V
+
+          `Flex` proportions can be a guessing game
+
+          -
+
+          Use colored borders for child elements
+        </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-             (Fl)example:
+             (Fl)example
 
-       Parent:
+         A parent element with Flex: 1
 
-       <View style={{flex: 1}}></View>
+         has two child elements, each with Flex: 1
 
+       As a result,
 
-       Children:
+         the children split the given amount of space
 
-       <View style={{borderWidth: 3, borderColor: ‘green’}} />
-
-       <View style={{borderWidth: 3, borderColor: ‘yellow’}} />
-
-       <View style={{borderWidth: 3, borderColor: ‘red’}} />
+                          THINK: each child has ½ of the designated space!
           </script>
+        </section>
+        <section data-background-color="#2D2D2D" data-markdown>
+          <script type="text/template">
+           (Fl)example
+
+      <View style={{flex: 1}}>
+
+        <View
+          flex: 1,
+          style={{borderWidth: 3, borderColor: ‘green’}}
+        />
+
+        <View
+          flex: 1,
+          style={{borderWidth: 3, borderColor: ‘yellow’}}
+        />
+
+      </View>
+
+          </script>
+        </section>
+        <section>
+          <img data-src="./images/slide9.png">
         </section>
 
         <section data-background-color="#05a5d1">Setting the main axis with flexDirection</section>
@@ -112,19 +170,18 @@
 
             Creating a button with centered text
 
-       Parent:
-
-       <View style={{
-         justifyContent: ‘center’,
-         alignItems: ‘center’,
-         borderWidth: Stylesheet.hairlineWidth,
-         borderRadius: 50,
-       }}></View>
-
-       Child:
-
-       <Text>Create Account</Text>
-
+       <TouchableOpacity style={{
+         justifyContent: 'center',
+         alignItems: 'center',
+         backgroundColor: 'green',
+         borderColor: 'green',
+         borderWidth: 1,
+         borderRadius: 100,
+         height: 50,
+         width: 325
+       }}>
+         <Text style={{color: 'white'}}>Demo as a guest</Text>
+       </TouchableOpacity
           </script>
         </section>
 
@@ -143,7 +200,7 @@
        Middle child of 3:
 
        {alignSelf: center}
-           
+
           </script>
         </section>
 
