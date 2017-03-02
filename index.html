@@ -67,7 +67,7 @@
           <img data-src="./images/after_a.png">-<img data-src="./images/after_b.png">-<img data-src="./images/after_c.png">
         </section>
         <section>
-          <img data-src="./images/android_ios_1.png"> - <img data-src="./images/android_ios_1.png">
+          <img data-src="./images/android_ios1.png"> - <img data-src="./images/android_ios2.png">
         </section>
 
 
@@ -157,13 +157,11 @@
       <View style={{flex: 1}}>
 
         <View
-          flex: 1,
-          style={{borderWidth: 3, borderColor: ‘green’}}
+          style={{flex: 1,borderWidth: 3, borderColor: 'green'}}
         />
 
         <View
-          flex: 1,
-          style={{borderWidth: 3, borderColor: ‘yellow’}}
+          style={{flex: 1,borderWidth: 3, borderColor: 'yellow'}}
         />
 
       </View>
@@ -186,7 +184,24 @@
            (left to right)
           </script>
         </section>
-        <section data-background-color="#2D2D2D"></section>
+        <section data-background-color="#2D2D2D" data-markdown>
+         <script type="text/template">
+           (Fl)example
+
+      <View style={{flex: 1, flexDirection: 'column' || 'row'}}>
+
+        <View
+          style={{flex: 1,borderWidth: 3, borderColor: 'green'}}
+        />
+
+        <View
+          style={{flex: 1,borderWidth: 3, borderColor: 'yellow'}}
+        />
+
+      </View>
+
+         </script>
+        </section>
         <section>
           Column <img data-src="./images/beginner3a.png"> - <img data-src="./images/beginner3b.png"> Row
         </section>
@@ -208,7 +223,20 @@
            'center', 'space-around', 'space-between'
           </script>
         </section>
-        <section data-background-color="#2D2D2D"></section>
+        <section data-background-color="#2D2D2D" data-markdown>
+         <script type="text/template">
+           (Fl)example
+
+      <View
+        style={{flex: 1, justifyContent: 'flex-start' || other}}
+      >
+
+      {insert child elements}
+
+      </View>
+
+         </script>
+        </section>
         <section>
           <img data-src="./images/beginner4a.png"> - <img data-src="./images/beginner4b.png">
         </section>
@@ -277,15 +305,18 @@
           <script type="text/template">
              (Fl)example:
 
-       Parent:
+       Parents:
 
-       {flexDirection: ‘row’,
-         justifyContent: space-between,
-         alignItems: center}
+       {flexDirection: 'column',
+         alignItems: 'center'}
 
-       Last child of 3:
+       One child:
 
-       {alignSelf: flex-end}
+       {alignSelf: 'flex-start'}
+
+       Another child:
+
+       {alignSelf: 'flex-end'}
 
           </script>
         </section>
@@ -296,14 +327,14 @@
         <section data-background-color="#05a5d1">Avoid hiding input fields behind the keyboard</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           All child elements within the parent container
+           ALL child elements within the parent container
 
-           MUST have an assigned proportion using {flex: _}
+           MUST have an assigned {flex: _} proportion...
           </script>
         </section>
-        <section data-background-color="#2D2D2D"></section>
+        <section data-background-color="#2D2D2D">...or else it'll get UGLY</section>
         <section>
-          <img data-src="./images/slide.png">
+          Good <img data-src="./images/keyboard_android1.png"> - <img data-src="./images/keyboard_android2.png"> Ugly
         </section>
 
         <section data-background-color="#05a5d1">Contain an icon or image with {flex: -1}</section>
@@ -315,10 +346,21 @@
 
            within a parent container
 
-           with a determined width
+           with a determined width or height
           </script>
         </section>
-        <section data-background-color="#2D2D2D"></section>
+        <section data-background-color="#2D2D2D" data-markdown>
+         <script type="text/template">
+           (Fl)example
+
+      <View style={{width: 300}}>
+
+        <Image style={{flex: -1}} />
+
+      </View>
+
+         </script>
+        </section>
         <section>
           <img data-src="./images/slide.png">
         </section>
@@ -332,6 +374,25 @@
         </section>
         <section>
           <img class="starter" data-src="./images/starter_b.png">
+        </section>
+        <section data-background-color="#2D2D2D" data-markdown>
+         <script type="text/template">
+           ### Sources I learned from:
+
+           - SmartLogic developer team
+
+           - [React Native Starter App](https://github.com/mcnamee/react-native-starter-app)
+
+             by Matt Mcnamee
+
+           - [A Mini-Course on React Native Flexbox](https://medium.com/the-react-native-log/a-mini-course-on-react-native-flexbox-2832a1ccc6#.xcd006cd7)
+
+             by Yoni Weisbrod
+           - [Intro to Styling in React Native](https://medium.com/the-react-native-log/intro-to-styling-in-react-native-c2c942bf1306#.nvchlb9jv)
+
+             by Spencer Carli
+
+         </script>
         </section>
 
 
