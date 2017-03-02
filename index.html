@@ -66,6 +66,9 @@
         <section>
           <img data-src="./images/after_a.png">-<img data-src="./images/after_b.png">-<img data-src="./images/after_c.png">
         </section>
+        <section>
+          <img data-src="./images/android_ios_1.png"> - <img data-src="./images/android_ios_1.png">
+        </section>
 
 
         <section data-background-color="#13a500">How to use it with React Native?</section>
@@ -75,10 +78,10 @@
         <section data-background-color="#13a500">Beginner Tips</section>
 
 
-        <section data-background-color="#05a5d1">Establishing a parent element with Flex: 1</section>
+        <section data-background-color="#05a5d1">Establishing a parent element with {flex: 1}</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           The `Flex` property determines the given space for
+           The `flex` property determines the given space for
 
            -
 
@@ -88,51 +91,54 @@
 
            the children within the parent
 
-           --
-
-           Think simple, think fractions!
           </script>
         </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
              (Fl)example
 
-         A parent element has Flex: 1
+         A parent element has {flex: 1}
 
        As a result,
 
          it takes up the entire space of the screen
+
+         THIS IS CRUCIAL FOR CHILDREN TO WORK AS EXPECTED
           </script>
         </section>
         <section>
           <img data-src="./images/beginner1.png">
         </section>
 
-        <section data-background-color="#05a5d1">Visualizing proportions with borderWidth and borderColor</section>
+        <section data-background-color="#05a5d1">Visualizing proportions with {borderWidth} and {borderColor}</section>
         <section data-background-color="#2D2D2D" data-markdown>
           React embraces reusable components
 
           V
 
-          `Flex` proportions can be a guessing game
+          ##### Use colored borders for child elements
 
           -
 
-          Use colored borders for child elements
+          `flex` proportions can be a guessing game
+
+          NOTE* React-Native uses camelCase
+
         </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
              (Fl)example
 
-         A parent element with Flex: 1
+         A parent element with {flex: 1}
 
-         has two child elements, each with Flex: 1
+         has two child elements, each with {flex: 1}
 
        As a result,
 
          the children split the given amount of space
 
-                          THINK: each child has ½ of the designated space!
+                          THINK FRACTIONS: each child has ½ or
+                          1 (flex) / 2 (children) of the designated space!
           </script>
         </section>
         <section data-background-color="#2D2D2D" data-markdown>
@@ -159,22 +165,39 @@
           <img data-src="./images/beginner2a.png"> - <img data-src="./images/beginner2b.png">
         </section>
 
-        <section data-background-color="#05a5d1">Setting the main axis with flexDirection</section>
-        <section data-background-color="#2D2D2D">The main axis defaults to ‘column’ (from top to bottom), but the other option is ‘row’ (left to right)</section>
-        <section data-background-color="#2D2D2D" data-markdown>
+        <section data-background-color="#05a5d1">Setting the main axis with {flexDirection}</section>
+        <section data-background-color="2D2D2D" data-markdown>
           <script type="text/template">
+           ##### Main axis can be set to ‘column’
+           ##### (top to bottom)
+           ###### [default]
+
+           -
+
+           ###### Other option is set it to ‘row’
+           ###### (left to right)
           </script>
         </section>
+        <section data-background-color="#2D2D2D"></section>
         <section>
           Column <img data-src="./images/beginner3a.png"> - <img data-src="./images/beginner3b.png"> Row
         </section>
 
-        <section data-background-color="#05a5d1">Spacing along the main axis with justifyContent</section>
-        <section data-background-color="#2D2D2D">Once the main axis is determined, justifyContent can be used to space the children along that axis. Options include flex-start, flex-end, center, space-around, and space-between. Note: rather than justify-content (expected in CSS), React-Native uses camelCase in the stylesheet</section>
+        <section data-background-color="#05a5d1">Spacing along the main axis with {justifyContent}</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
+           ##### Once the main axis is determined,
+
+           V
+
+           ### use {justifyContent} to space the children along that axis
+
+           -
+
+           ###### Options: 'flex-start', 'flex-end', 'center', 'space-around', 'space-between'
           </script>
         </section>
+        <section data-background-color="#2D2D2D"></section>
         <section>
           <img data-src="./images/beginner4a.png"> - <img data-src="./images/beginner4b.png">
         </section>
@@ -182,7 +205,7 @@
           <img class="beginner4" data-src="./images/beginner4c.png"> - <img class="beginner4" data-src="./images/beginner4d.png"> - <img class="beginner4" data-src="./images/beginner4e.png">
         </section>
 
-        <section data-background-color="#05a5d1">Spacing along the cross axis with alignItems</section>
+        <section data-background-color="#05a5d1">Spacing along the cross axis with {alignItems}</section>
         <section data-background-color="#2D2D2D">The cross axis is the complementary axis to the main axis. If the main axis is set in the ‘column’ direction, then the cross axis is the ‘row’ direction. If the main axis is ‘row’, then the cross axis is ‘column’. Similar to justifyContent, we can use alignItems to set the spacing as flex-start, flex-end, or center</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
@@ -213,7 +236,7 @@
         <section data-background-color="#13a500">Intermediate Tips</section>
 
 
-        <section data-background-color="#05a5d1">Positioning a black sheep with alignSelf</section>
+        <section data-background-color="#05a5d1">Positioning a black sheep with {alignSelf}</section>
         <section data-background-color="#2D2D2D">If we want a single child element to be positioned differently along the cross axis, then alignSelf comes in handy. Let’s say we want all of the child elements to centered along the horizontal cross axis, but the first child element to be left aligned. We can assign it alignSelf: flex-start to achieve this effect</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
@@ -223,11 +246,11 @@
 
        {flexDirection: ‘row’,
          justifyContent: space-between,
-         alignItems: flex-start}
+         alignItems: center}
 
-       Middle child of 3:
+       Last child of 3:
 
-       {alignSelf: center}
+       {alignSelf: flex-end}
 
           </script>
         </section>
@@ -236,58 +259,40 @@
         </section>
 
         <section data-background-color="#05a5d1">Avoid hiding input fields behind the keyboard</section>
-        <section data-background-color="#2D2D2D">All child elements within the parent container MUST have an assigned proportion using Flex: </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
+           All child elements within the parent container
+
+           MUST have an assigned proportion using {flex: _}
           </script>
         </section>
+        <section data-background-color="#2D2D2D"></section>
         <section>
           <img data-src="./images/slide.png">
         </section>
 
-        <section data-background-color="#05a5d1">Contain an icon or image with Flex: -1</section>
-        <section data-background-color="#2D2D2D">Using Flex: -1 on a child element within a parent container with a determined width</section>
+        <section data-background-color="#05a5d1">Contain an icon or image with {flex: -1}</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
+           Use {flex: -1}
+
+           on a child element
+
+           within a parent container
+
+           with a determined width
           </script>
         </section>
+        <section data-background-color="#2D2D2D"></section>
         <section>
           <img data-src="./images/slide.png">
         </section>
 
-        <section data-background-color="#05a5d1">Responsive images with resizeMode</section>
-        <section data-background-color="#2D2D2D">Setting the height and width to undefined, then using resizeMode</section>
+
+        <section data-background-color="#13a500">KEY TAKEAWAYS</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-             (Fl)example:
-
-       Maintain original aspect ratio
-
-       <Image
-         style={{flex:1, height: undefined, width: undefined}}
-         source={}
-         resizeMode="contain"
-       />
           </script>
-        </section>
-        <section>
-          <img data-src="./images/slide.png">
-        </section>
-        <section data-background-color="#2D2D2D" data-markdown>
-          <script type="text/template">
-             (Fl)example:
-
-       Fit a potentially not squared image in a circle
-
-       <Image
-         style={{flex:1, height: undefined, width: undefined}}
-         source={}
-         resizeMode="cover"
-       />
-          </script>
-        </section>
-        <section>
-          <img data-src="./images/slide.png">
         </section>
 
 
