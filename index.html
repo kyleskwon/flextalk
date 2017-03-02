@@ -40,7 +40,7 @@
 				<section data-background-color="#05a5d1">What is Flexbox?</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           Grid system of flexible boxes for
+           #### Grid system of flexible boxes for
 
            responsive web and mobile layout
 
@@ -51,7 +51,7 @@
 				<section data-background-color="#05a5d1">Why should we utilize it?</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           Makes responsive design easier!
+           #### Makes responsive design easier!
 
            -
 
@@ -81,7 +81,7 @@
         <section data-background-color="#05a5d1">Establishing a parent element with {flex: 1}</section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
-           The `flex` property determines the given space for
+           #### Determines the given space for
 
            -
 
@@ -110,20 +110,29 @@
           <img data-src="./images/beginner1.png">
         </section>
 
-        <section data-background-color="#05a5d1">Visualizing proportions with {borderWidth} and {borderColor}</section>
+        <section data-background-color="#05a5d1"data-markdown>
+          <script type="text/template">
+          Visualizing proportions with
+
+          {borderWidth} and {borderColor}
+          </script>
+        </section>
         <section data-background-color="#2D2D2D" data-markdown>
+          <script type="text/template">
           React embraces reusable components
 
           V
 
           ##### Use colored borders for child elements
 
-          -
+          V
 
-          `flex` proportions can be a guessing game
+          reduce the guessing game!
 
-          NOTE* React-Native uses camelCase
+          _
 
+          NOTE* use camelCase
+          </script>
         </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
@@ -169,13 +178,12 @@
         <section data-background-color="2D2D2D" data-markdown>
           <script type="text/template">
            ##### Main axis can be set to ‘column’
-           ##### (top to bottom)
-           ###### [default]
+           (top to bottom) [DEFAULT]
 
            -
 
            ###### Other option is set it to ‘row’
-           ###### (left to right)
+           (left to right)
           </script>
         </section>
         <section data-background-color="#2D2D2D"></section>
@@ -190,11 +198,14 @@
 
            V
 
-           ### use {justifyContent} to space the children along that axis
+           ### use {justifyContent: '_'}
+           ###### to space the children along that axis
 
            -
 
-           ###### Options: 'flex-start', 'flex-end', 'center', 'space-around', 'space-between'
+           Options: 'flex-start', 'flex-end',
+
+           'center', 'space-around', 'space-between'
           </script>
         </section>
         <section data-background-color="#2D2D2D"></section>
@@ -206,7 +217,23 @@
         </section>
 
         <section data-background-color="#05a5d1">Spacing along the cross axis with {alignItems}</section>
-        <section data-background-color="#2D2D2D">The cross axis is the complementary axis to the main axis. If the main axis is set in the ‘column’ direction, then the cross axis is the ‘row’ direction. If the main axis is ‘row’, then the cross axis is ‘column’. Similar to justifyContent, we can use alignItems to set the spacing as flex-start, flex-end, or center</section>
+        <section data-background-color="#2D2D2D" data-markdown>
+          <script type="text/template">
+           ### The cross axis is complementary
+           ### to the main axis.
+
+           V
+
+           ###### If main axis is set to ‘column’,
+           ###### then cross axis is in ‘row’ direction.
+
+           and visa versa
+
+           -
+
+           Options: 'flex-start', 'flex-end', 'center'
+          </script>
+        </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
              (Fl)example:
@@ -237,7 +264,15 @@
 
 
         <section data-background-color="#05a5d1">Positioning a black sheep with {alignSelf}</section>
-        <section data-background-color="#2D2D2D">If we want a single child element to be positioned differently along the cross axis, then alignSelf comes in handy. Let’s say we want all of the child elements to centered along the horizontal cross axis, but the first child element to be left aligned. We can assign it alignSelf: flex-start to achieve this effect</section>
+        <section data-background-color="#2D2D2D" data-markdown>
+          <script type="text/template">
+            ###### use {alignSelf}
+
+            to position a single child element
+
+            differently along the cross axis
+          </script>
+        </section>
         <section data-background-color="#2D2D2D" data-markdown>
           <script type="text/template">
              (Fl)example:
@@ -289,11 +324,6 @@
         </section>
 
 
-        <section data-background-color="#13a500">KEY TAKEAWAYS</section>
-        <section data-background-color="#2D2D2D" data-markdown>
-          <script type="text/template">
-          </script>
-        </section>
 
 
         <section data-background-color="#13a500">Want to start styling React Native mobile apps?</section>
